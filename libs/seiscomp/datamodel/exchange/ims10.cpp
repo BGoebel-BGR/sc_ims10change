@@ -79,8 +79,8 @@ bool ExporterIMS10::put(std::streambuf* buf, BaseObject* obj) {
 		Event* e = ep->event(i);
 
 		for ( size_t i = 0; i < ep->originCount(); ++i )
-			if ( ep->origin(i)->publicID() == e->preferredOriginID() )
-				o = ep->origin(i);
+			// if ( ep->origin(i)->publicID() == e->preferredOriginID() )
+			o = ep->origin(i);
 
 		for ( size_t i = 0; i < o->magnitudeCount(); ++i )
 			if ( o->magnitude(i)->publicID() == e->preferredMagnitudeID() )
